@@ -105,6 +105,9 @@ input, select, textarea {
 		background-attachment: fixed;
 		background-position: center;
 		background-repeat: no-repeat;
+		image-rendering: -webkit-optimize-contrast; /* For webkit (Chrome, Safari) */
+		image-rendering: crisp-edges; /* For Firefox */
+		image-rendering: pixelated; /* For other browsers */
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
