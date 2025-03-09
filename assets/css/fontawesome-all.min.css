@@ -32,7 +32,7 @@
  
  /* Add the Bluesky logo */
  .fa-bluesky::before {
-   content: url('csv/images/bluesky.svg'); /* Replace with your logo path */
+   content: url('css/images/bluesky.svg'); /* Replace with your logo path */
    display: inline-block;
    width: 1em;
    height: 1em;
