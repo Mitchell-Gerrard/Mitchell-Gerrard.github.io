@@ -19,7 +19,7 @@
 
 
 
- .icon.fa-bluesky:before {
+ .fa-bluesky:before {
     content: '\f8ff'; /* Custom Unicode for Bluesky */
     font-family: 'Font Awesome 5 Brands';
     font-weight: 400;
