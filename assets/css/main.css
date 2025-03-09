@@ -2409,6 +2409,9 @@ input, select, textarea {
 		.icon.brands:before {
 			font-family: 'Font Awesome 5 Brands';
 		}
+		.icon.brands6:before {
+			font-family: 'Font Awesome 6 Brands';
+		}
 
 /* Image */
 
