@@ -19,6 +19,30 @@
 
 
 
+ .fa { font-family: 'Font Awesome 5 Free'; font-weight: 900; }
+ .fa, .fa-brands, .fa-regular, .fa-solid, .fab, .far, .fas {
+   -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
+   display: inline-block;
+   font-style: normal;
+   font-variant: normal;
+   text-rendering: auto;
+   line-height: 1;
+ }
+ 
+ /* Add the Bluesky logo */
+ .fa-bluesky::before {
+   content: url('csv/images/bluesky.svg'); /* Replace with your logo path */
+   display: inline-block;
+   width: 1em;
+   height: 1em;
+   vertical-align: -0.125em;
+ }
+ 
+ .fa-brands.fa-bluesky {
+   font-family: 'Font Awesome 5 Brands';
+ }
+ 
 
 
 
