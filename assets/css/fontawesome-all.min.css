@@ -32,7 +32,7 @@
  
  /* Add the Bluesky logo */
  .fa-bluesky::before {
-   content: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJDNi41MiAyIDIgNi41MiAyIDEyczQuNTIgMTAgMTAgMTAgMTAtNC41MiAxMC0xMFMxNy40OCAyIDEyIDJ6bTAgMGM1LjQ4IDAgMTAgNC41MiAxMCAxMFMxNy40OCAyIDEyIDJ6bS0xIDhhMSAxIDAgMCAxIDAtMmgxYTEgMSAwIDAgMSAwIDJoLTF6bTAtNGExIDEgMCAwIDEgMC0yaDFhMSAxIDAgMCAxIDAgMmgteiIgZmlsbD0iI2JsdWUiLz4KPC9zdmc+');
+   content: url('css/images/bluesky.svg');
    display: inline-block;
    width: 1em;
    height: 1em;
