@@ -29,6 +29,7 @@
 			font-weight: 900;
 		}
 		@else {
+			consol.log('Invalid category: ' + $category);
 			font-family: 'Font Awesome 6 Free';
 			font-weight: 400;
 		}
