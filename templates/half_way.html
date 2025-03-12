@@ -6,11 +6,12 @@
 -->
 <html>
 	<head>
-		<title>Conferences</title>
+		<title>Holographic Entanglement Entropy</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/maincft.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
 	</head>
 	<body class="is-preload">
 
@@ -19,7 +20,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="index.html">Conferences</a></h1>
+						<h1><a href="index.html">Holographic Entanglement Entropy</a></h1>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -32,7 +33,6 @@
 							<ul class="links">
 								<li><a href="index.html">Home</a></li>
 								<li><a href="previous_work.html">Previous Work</a></li>
-								<li><a href="confrences.html">Conferences</a></li>
 								<li><a href="elements.html">Elements</a></li>
 								<li><a href="#">Log In</a></li>
 								<li><a href="#">Sign Up</a></li>
@@ -45,8 +45,8 @@
 					<section id="wrapper">
 						<header>
 							<div class="inner">
-								<h2>Confrences</h2>
-								<p>list of confrence</p>
+								<h2>Previous Work</h2>
+								<p>list of prevous work</p>
 							</div>
 						</header>
 
@@ -54,10 +54,11 @@
 							<div class="wrapper">
 								<div class="inner">
 
-									<h3 class="major">Photon24</h3>
-									<p>During septemper of 2024 I went to swansea to attend the photon 24 confrnce to present work on spacialy dependent presure measurement in antiresonant hollowcore fibres.</p>
-									<a href="photon24.html" class="special">Learn more</a>
+									<h3 class="major">prevous work</h3>
+									<p>During my master degree I studied  ADS<sub>d+1</sub>/CFT<sub>d</sub> and the Ryu–Takayanagi conjecture showing how the entanglement entropy can be found using the minimal surface in an anti-desitter space time.</p>
+									<a href="Holographic_Entanglement_Entropy.html" class="special">Learn more</a>
 
+									<p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius.</p>
 
 									<h3 class="major">Vitae phasellus</h3>
 									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
@@ -83,46 +84,7 @@
 					</section>
 
 				<!-- Footer -->
-					<section id="footer">
-						<div class="inner">
-							<h2 class="major">Get in touch</h2>
-							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-							<ul class="contact">
-								<li class="icon solid fa-home">
-									Untitled Inc<br />
-									1234 Somewhere Road Suite #2894<br />
-									Nashville, TN 00000-0000
-								</li>
-								<li class="icon solid fa-phone">(000) 000-0000</li>
-								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
-								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
-								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
+				<div id="footer-placeholder"></div>
 
 			</div>
 
@@ -133,6 +95,14 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+			    $(document).ready(function(){
+			        $("#footer-placeholder").load("footer.html");
+					if(status === "error"){
+                console.error("Error loading footer:", xhr.status, xhr.statusText);
+            }
+			    });
+			</script>
 
 	</body>
 </html>
