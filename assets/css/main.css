@@ -2375,45 +2375,41 @@ input, select, textarea {
 
 /* Icon */
 
-.icon {
-	text-decoration: none;
-	border-bottom: none;
-	position: relative;
-}
+	.icon {
+		text-decoration: none;
+		border-bottom: none;
+		position: relative;
+	}
 
-/* Handle regular (solid) icons */
-.icon.solid:before {
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	display: inline-block;
-	font-style: normal;
-	font-variant: normal;
-	text-rendering: auto;
-	line-height: 1;
-	text-transform: none !important;
-	font-family: 'Font Awesome 6 Free';
-	font-weight: 900;
-}
+		.icon:before {
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			display: inline-block;
+			font-style: normal;
+			font-variant: normal;
+			text-rendering: auto;
+			line-height: 1;
+			text-transform: none !important;
+			font-family: 'Font Awesome 6 Free';
+			font-weight: 400;
+		}
 
-/* Handle brand icons (like Bluesky, Twitter, etc.) */
-.icon.brands:before {
-	font-family: 'Font Awesome 6 Brands';
-	font-weight: 400;
-}
+		.icon > .label {
+			display: none;
+		}
 
-/* Prevent text from inheriting Font Awesome */
-li a {
-	font-family: inherit;
-	text-decoration: none;
-	border-bottom: none;
-	margin-left: 8px; /* Add space between icon and text */
-}
+		.icon:before {
+			line-height: inherit;
+		}
 
-/* Add consistent alignment */
-li {
-	display: flex;
-	align-items: center;
-}
+		.icon.solid:before {
+			font-weight: 900;
+		}
+
+		.icon.brands:before {
+			font-family: 'Font Awesome 6 Brands';
+		}
+		
 
 
 /* Image */
