@@ -73,20 +73,22 @@
 			</div>
 
 		<!-- Scripts -->
-			<script>
-				$(document).ready(function(){
-					$("#header-placeholder").load("header.html");
-					if(status === "error"){
-				console.error("Error loading footer:", xhr.status, xhr.statusText);
-			}
-				});
-			</script>
+
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				$(document).ready(function() {
+					$("#header-placeholder").load("header.html", function(response, status, xhr) {
+						if (status === "error") {
+							console.error("Error loading header:", xhr.status, xhr.statusText);
+						}
+					});
+				});
+			</script>
 			<script>
 			    $(document).ready(function(){
 			        $("#footer-placeholder").load("footer.html");
