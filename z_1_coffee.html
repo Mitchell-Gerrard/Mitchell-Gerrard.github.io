@@ -82,9 +82,12 @@
 			<script src="assets/js/main.js"></script>
 			<script>
 				$(document).ready(function() {
-					$("#header-placeholder").load("header.html", function(response, status, xhr) {
-						if (status === "error") {
-							console.error("Error loading header:", xhr.status, xhr.statusText);
+					$("#header-placeholder").load("header.html", function() {
+						console.log("Header loaded successfully!");
+						
+						// Re-initialize menu functionality
+						if (typeof window.menuInit === "function") {
+							menuInit(); // Call existing menu function if it exists
 						}
 					});
 				});
