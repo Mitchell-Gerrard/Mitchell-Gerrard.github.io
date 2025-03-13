@@ -73,6 +73,14 @@
 			</div>
 
 		<!-- Scripts -->
+			<script>
+				$(document).ready(function(){
+					$("#header-placeholder").load("header.html");
+					if(status === "error"){
+				console.error("Error loading footer:", xhr.status, xhr.statusText);
+			}
+				});
+			</script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
@@ -87,14 +95,7 @@
             }
 			    });
 			</script>
-			<script>
-			    $(document).ready(function(){
-			        $("#header-placeholder").load("header.html");
-					if(status === "error"){
-                console.error("Error loading footer:", xhr.status, xhr.statusText);
-            }
-			    });
-			</script>
+
 
 	</body>
 </html>
