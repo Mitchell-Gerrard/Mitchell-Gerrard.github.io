@@ -22,7 +22,28 @@
 
 				<!-- Header -->
 					
-					<div id="header-placeholder"></div>
+				<!-- Header -->
+					<header id="header" >
+						<h1><a href="index.html">Mitchell Gerrard</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+					<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="Previous_work.html">Previous Work</a></li>
+								<li><a href="elements.html">Elements</a></li>
+								<li><a href="#">Log In</a></li>
+								<li><a href="#">Sign Up</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
 
 				<!-- Wrapper -->
 					<section id="wrapper">
@@ -80,18 +101,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script>
-				$(document).ready(function() {
-					$("#header-placeholder").load("header.html", function() {
-						console.log("Header loaded successfully!");
-						
-						// Re-initialize menu functionality
-						if (typeof window.menuInit === "function") {
-							menuInit(); // Call existing menu function if it exists
-						}
-					});
-				});
-			</script>
+
 			<script>
 			    $(document).ready(function(){
 			        $("#footer-placeholder").load("footer.html");
