@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write  # <-- allows pushing the built site back to the repo
+  contents: write  # allows pushing to gh-pages
 
 jobs:
   build:
@@ -24,16 +24,15 @@ jobs:
           bundler-cache: true
 
       - name: Install dependencies
-        run: |
-          bundle install
+        run: bundle install
 
       - name: Build the site with Jekyll
         run: bundle exec jekyll build
 
-      - name: Deploy site to GitHub Pages (main branch)
+      - name: Deploy site to gh-pages branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: main
+          publish_branch: gh-pages
           publish_dir: ./_site
-          keep_files: false
+          cname: mitchell-gerrard.github.io
