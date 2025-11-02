@@ -3,8 +3,11 @@ name: Build and Deploy Jekyll
 on:
   push:
     branches:
-      - main  # or master
+      - main
   workflow_dispatch:
+
+permissions:
+  contents: write  # <-- REQUIRED for gh-pages push
 
 jobs:
   build:
