@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>This is Solid State</title>
-    <description>Another free + fully responsive site template by HTML5 UP
+    <title>Mitchell Gerrard</title>
+    <description>A computational physicist specialising in nonlinear optics.
 </description>
     <link>https://Mitchell-Gerrard.github.io/</link>
     <atom:link href="https://Mitchell-Gerrard.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 02 Nov 2025 14:15:40 +0000</pubDate>
-    <lastBuildDate>Sun, 02 Nov 2025 14:15:40 +0000</lastBuildDate>
+    <pubDate>Sun, 02 Nov 2025 23:58:21 +0000</pubDate>
+    <lastBuildDate>Sun, 02 Nov 2025 23:58:21 +0000</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
     
       <item>
