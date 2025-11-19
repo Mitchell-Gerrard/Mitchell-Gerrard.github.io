@@ -9,8 +9,8 @@ layout: default
         <a href="#" class="image"><img src="images/nsoloton.jpg" alt="" /></a>
         <div class="content">
             <h2 class="major">Current work</h2>
-            <p>Currently, I'm using the nonlinear schrodinger equation to study nonlinear optics in hollowcore optical fibres.</p>
-            <a href="#" class="special">Learn more</a>
+            <p>Currently, I am using nonlinear optics to find the pressure in hollow-core fibres numericly.</p>
+            <a href="{{ '/Current_work/Current_work' | relative_url }}" class="special">Learn more</a>
         </div>
     </div>
 </section>
@@ -20,7 +20,7 @@ layout: default
                     <div class="content">
                         <h2 class="major">Previous Work</h2>
                         <p>I studied  ADS<sub>d+1</sub>/CFT<sub>d</sub> and the Ryu–Takayanagi conjecture.</p>
-                        <a href="{{ '/previous_work/previous_work/' | relative_url }}"  class="special">Learn more</a>
+                        <a href="{{ '/previous_work/previous_work' | relative_url }}"  class="special">Learn more</a>
                     </div>
                 </div>
             </section>

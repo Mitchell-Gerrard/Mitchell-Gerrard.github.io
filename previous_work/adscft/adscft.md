@@ -3,6 +3,7 @@ layout: post
 title:  "Holographic Entanglement Entropy"
 date:   2025-11-02 13:25:27 +0000
 categories: previous work
+tagline: Where you can talk about a D+1 field theory in a D+2 Anti-Desitter space time
 ---
 
 
@@ -24,4 +25,3 @@ categories: previous work
     </div>
 </div>
 
-</section>
