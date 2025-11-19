@@ -6,9 +6,30 @@
 </description>
     <link>https://Mitchell-Gerrard.github.io/</link>
     <atom:link href="https://Mitchell-Gerrard.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 03 Nov 2025 00:00:36 +0000</pubDate>
-    <lastBuildDate>Mon, 03 Nov 2025 00:00:36 +0000</lastBuildDate>
+    <pubDate>Wed, 19 Nov 2025 12:37:13 +0000</pubDate>
+    <lastBuildDate>Wed, 19 Nov 2025 12:37:13 +0000</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>Floating-Point Precision in Python for Scientific Simulations</title>
+        <description>&lt;p&gt;When working on scientific simulations in Python—whether modeling nonlinear optical phenomena, fluid dynamics, or other complex systems—it’s easy to overlook the small details that can significantly impact your results. One of the most important of these details is &lt;strong&gt;floating-point precision&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Python represents decimal numbers using floating-point arithmetic, which allows efficient computation with real numbers but comes with inherent limitations. Unlike integers, floating-point numbers can’t always represent decimal values exactly. For example, simple numbers like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.1&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.2&lt;/code&gt; may not be stored precisely due to the binary representation used under the hood. Over many calculations, these tiny discrepancies can accumulate, sometimes leading to unexpected behavior in simulations.&lt;/p&gt;
+
+&lt;p&gt;Libraries like &lt;strong&gt;NumPy&lt;/strong&gt; provide tools to manage precision carefully. You can choose between different numeric types—&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;float32&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;float64&lt;/code&gt;, or even higher precision libraries—to control how much memory and accuracy your calculations use. Understanding these differences is crucial when simulating systems sensitive to small changes, such as pulse propagation in nonlinear optical media or other iterative scientific computations.&lt;/p&gt;
+
+&lt;p&gt;Another consideration is &lt;strong&gt;numerical stability&lt;/strong&gt;. Even mathematically equivalent formulas can produce different results due to rounding errors. Being mindful of how Python performs arithmetic, and testing your results against known solutions or analytical approximations, can help prevent subtle bugs and unreliable results.&lt;/p&gt;
+
+&lt;p&gt;In short, floating-point numbers are deceptively simple but incredibly important in scientific programming. By understanding their behavior, you can make your Python simulations more accurate, reliable, and trustworthy—turning small details into a foundation for meaningful scientific insight.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+        <link>https://Mitchell-Gerrard.github.io/python%20tips/2025/11/19/floating-point.html</link>
+        <guid isPermaLink="true">https://Mitchell-Gerrard.github.io/python%20tips/2025/11/19/floating-point.html</guid>
+        
+        
+        <category>Python Tips</category>
+        
+      </item>
     
       <item>
         <title>Welcome to Jekyll!</title>

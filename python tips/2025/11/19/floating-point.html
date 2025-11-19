@@ -11,12 +11,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Nullam dignissim</title>
-  <meta name="description" content="A computational physicist specialising in nonlinear optics.
-">
+  <title>Floating-Point Precision in Python for Scientific Simulations</title>
+  <meta name="description" content="When working on scientific simulations in Python—whether modeling nonlinear optical phenomena, fluid dynamics, or other complex systems—it’s easy to overlook...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="https://Mitchell-Gerrard.github.io/3-Nullam-dignissim.html">
+  <link rel="canonical" href="https://Mitchell-Gerrard.github.io/python%20tips/2025/11/19/floating-point.html">
   <link rel="alternate" type="application/rss+xml" title="Mitchell Gerrard" href="https://Mitchell-Gerrard.github.io/feed.xml">
 
   <!--[if lte IE 8]><script src="/js/ie/html5shiv.js"></script><![endif]-->
@@ -85,90 +84,67 @@
 
 <!-- Banner -->
       <!-- Wrapper -->
-      <!-- Wrapper -->
-<section id="wrapper">
-	<header>
-		<div class="inner">
-			<h2>Nullam dignissim</h2>
-			<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-		</div>
-	</header>
-
-	<!-- Content -->
-		<div class="wrapper">
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<!-- Wrapper -->
+	<section id="wrapper">
+		<header>
 			<div class="inner">
-
-				
-
-
-				<section class="features">
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-				<article>
-					<a href="/blog/2016/07/20/Sed-feugiat-lorem.html" class="image"><img src="/images/pic07.jpg" alt="" /></a>
-					<h3 class="major">Sed feugiat lorem</h3>
-					<span>Jul 20, 2016</span>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-					<a href="/blog/2016/07/20/Sed-feugiat-lorem.html" class="special">Learn more</a>
-				</article>
-			
-		
-	
-		
-			
-				<article>
-					<a href="/blog/2016/07/20/Nisl-placerat.html" class="image"><img src="/images/pic06.jpg"" alt="" /></a>
-					<h3 class="major">Nisl placerat</h3>
-					<span>Jul 20, 2016</span>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-					<a href="/blog/2016/07/20/Nisl-placerat.html" class="special">Learn more</a>
-				</article>
-			
-		
-	
-		
-			
-				<article>
-					<a href="/blog/2016/07/20/Fusce-consequat.html" class="image"><img src="/images/pic05.jpg" alt="" /></a>
-					<h3 class="major">Fusce consequat</h3>
-					<span>Jul 20, 2016</span>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-					<a href="/blog/2016/07/20/Fusce-consequat.html" class="special">Learn more</a>
-				</article>
-			
-		
-	
-		
-			
-				<article>
-					<a href="/blog/2016/07/20/Ante-fermentum.html" class="image"><img src="/images/pic04.jpg" alt="" /></a>
-					<h3 class="major">Ante fermentum</h3>
-					<span>Jul 20, 2016</span>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-					<a href="/blog/2016/07/20/Ante-fermentum.html" class="special">Learn more</a>
-				</article>
-			
-		
-	
-</section>
-
+				<h2>Floating-Point Precision in Python for Scientific Simulations</h2>
+				<p class="post-meta"><time datetime="2025-11-19T00:00:00+00:00" itemprop="datePublished">Nov 19, 2025</time></p>
+				<p>Why understanding floating-point numbers matters for accurate simulations.</p>
 			</div>
-		</div>
+		</header>
 
+		<!-- Content -->
+			<div class="wrapper">
+				<div class="inner">
+
+					<p>When working on scientific simulations in Python—whether modeling nonlinear optical phenomena, fluid dynamics, or other complex systems—it’s easy to overlook the small details that can significantly impact your results. One of the most important of these details is <strong>floating-point precision</strong>.</p>
+
+<p>Python represents decimal numbers using floating-point arithmetic, which allows efficient computation with real numbers but comes with inherent limitations. Unlike integers, floating-point numbers can’t always represent decimal values exactly. For example, simple numbers like <code class="language-plaintext highlighter-rouge">0.1</code> or <code class="language-plaintext highlighter-rouge">0.2</code> may not be stored precisely due to the binary representation used under the hood. Over many calculations, these tiny discrepancies can accumulate, sometimes leading to unexpected behavior in simulations.</p>
+
+<p>Libraries like <strong>NumPy</strong> provide tools to manage precision carefully. You can choose between different numeric types—<code class="language-plaintext highlighter-rouge">float32</code>, <code class="language-plaintext highlighter-rouge">float64</code>, or even higher precision libraries—to control how much memory and accuracy your calculations use. Understanding these differences is crucial when simulating systems sensitive to small changes, such as pulse propagation in nonlinear optical media or other iterative scientific computations.</p>
+
+<p>Another consideration is <strong>numerical stability</strong>. Even mathematically equivalent formulas can produce different results due to rounding errors. Being mindful of how Python performs arithmetic, and testing your results against known solutions or analytical approximations, can help prevent subtle bugs and unreliable results.</p>
+
+<p>In short, floating-point numbers are deceptively simple but incredibly important in scientific programming. By understanding their behavior, you can make your Python simulations more accurate, reliable, and trustworthy—turning small details into a foundation for meaningful scientific insight.</p>
+
+
+					<section class="features">
+	
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
 </section>
+					
+				</div>
+			</div>
+	</section>
+</article>
+
       <!-- Footer -->
       <section id="footer">
     <div class="inner">
