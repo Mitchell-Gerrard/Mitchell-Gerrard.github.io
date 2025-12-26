@@ -2,8 +2,8 @@
 layout: post
 title: "Floating-Point Precision in Python for Scientific Simulations"
 date: 2025-11-19
-tagline: Why understanding floating-point numbers matters for accurate simulations.
-image: _posts/post_images/floatingpoints.jpg
+tagline: Why understanding floating-point numbers matters for accurate simulations?
+image: /images/post_images/2025_11_19_floating_point/floats.png
 category: Python Tips
 ---
 
