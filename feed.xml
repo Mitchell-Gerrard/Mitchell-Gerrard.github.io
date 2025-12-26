@@ -6,9 +6,47 @@
 </description>
     <link>https://Mitchell-Gerrard.github.io/</link>
     <atom:link href="https://Mitchell-Gerrard.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 19 Nov 2025 12:37:13 +0000</pubDate>
-    <lastBuildDate>Wed, 19 Nov 2025 12:37:13 +0000</lastBuildDate>
+    <pubDate>Fri, 26 Dec 2025 22:42:44 +0000</pubDate>
+    <lastBuildDate>Fri, 26 Dec 2025 22:42:44 +0000</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>Fixing infectionsim: Fixing my poor university code! 🔨</title>
+        <description>&lt;h3 class=&quot;major&quot;&gt;Introduction 👋&lt;/h3&gt;
+&lt;p&gt;This was the &lt;strong&gt;second&lt;/strong&gt; python project I ever worked on, the first being a connect 4 game that went off the rails, that one will be fun to fix, but for now we are working on a project I made due to a change of plans. This was the year 2020 I was in my first year of my degree, and in march the covid-19 struck the UK with it’s ability to shutdown the entire globe, it sent us home from University throwing us in to disaray. We have experimental modules we have to complete, we have been handing our work inperson what do we do, what work can we do, how do we get our lectures ahhh 😰!!&lt;/p&gt;
+
+&lt;p&gt;The university system was reveluionised, they recored lectures at home then enabled handing in PDFs on Blackboard, this made things easier but there is still the question of how are we going to do the experimental module? It was data analysis. I cannot recall the other options for this miniproject, but having the opotunity to be able to apply skills to a current even was somthing I couln’t pass up, I was allready tracking the growth of covid using data from John Hopkins, so this came together nicely. So I looked in to the &lt;strong&gt;SIR&lt;/strong&gt; model and I was hooked how a random distrubion can cause somthing so real to happen, this happens with other things of course we get patterns that occur from randomness all the time look at ratiation, but this griped me so I figured out how to implement the random walks and how to change the infection distribution, I could even compare it to covid. But it sorted of moved from the project so the write up didnt end up the way I wanted it to be so here is a way I can do it the way I want to. And make the code better.&lt;/p&gt;
+
+&lt;p&gt;So in the next section I will layout how the simulation works and the background of the &lt;strong&gt;SIR&lt;/strong&gt;, then in the section after I will talk about the good parts of my simulation. Following that I will critic my old code about how it is set up improvements that can be made and the lack of comments, then I will correct the simulation. After that talk through some consequences of the simulation adding comparisions to covid-19, finaly I will conclude the excersise talking about weather it was worth the rewrite all of these years later, and my development since that time in my life.&lt;/p&gt;
+
+&lt;h3 class=&quot;major&quot;&gt;Numerical Model 🖥&lt;/h3&gt;
+&lt;p&gt;This section will focus on the &lt;strong&gt;SIR&lt;/strong&gt; model used by biologests for desise spread and how this model comes out of a random interactions between indviduals and ways we can alter the model to line up with the real world.&lt;/p&gt;
+&lt;h3&gt;The SIR Model 🦠&lt;/h3&gt;
+&lt;p&gt;The &lt;strong&gt;SIR&lt;/strong&gt; model &lt;a id=&quot;ref-1&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#bib-1&quot;&gt;[1]&lt;/a&gt; is one of the most simple &lt;strong&gt;Compartmental models&lt;/strong&gt; these model are used to see how populations move between diffrent states, in this case representing &lt;strong&gt;S&lt;/strong&gt;usceptible, &lt;strong&gt;I&lt;/strong&gt;nfectious, and &lt;strong&gt;R&lt;/strong&gt;ecovered individuals.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;S&lt;/strong&gt;usceptible: This group represent the people that have not caught or recoved from the disease, this group does not grow inside this model due to the assumtion the recovered group cannot catch the disease again&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I&lt;/strong&gt;nfectious: This group reprisents the people that are curently infected with the disease. This group in this model has the most comlex behavour due to this group both growing due to the infection and decreasing from people recovering from the disease.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;R&lt;/strong&gt;ecovered: This group are &lt;strong&gt;“Recovered”&lt;/strong&gt; from the disease, you may notice the quotation marks, this is due to this group not being seperated in to dead and non dead catagories, this may throw off the model slightly but for low mortyality to recovered ratio of sars type viruses it is reletivly safe to assume the recovered group would dominate.&lt;/p&gt;
+
+&lt;p&gt;The recovered group brings up a question in this covid modeling, does the recovered domination assumption hold, because we had to lock down is it must of had a high mortality right? John Hopkins&lt;a id=&quot;ref-2&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#bib-2&quot;&gt;[2]&lt;/a&gt; give a case mortality ratio around 1-2 %, this measure would morelikly give an overestermate than an underestermate due to relying on confermed cases, people are more likly to have not got tested due to the how contagus the disease was, even if this overestermated number was close to the truth it is still dominated by people recovering meaning the assumtion holds.&lt;/p&gt;
+
+&lt;h3 class=&quot;major&quot;&gt; Bibliography&lt;/h3&gt;
+&lt;p&gt;&lt;a id=&quot;bib-1&quot;&gt;&lt;/a&gt;[1] Hethcote, Herbert W, “The Mathematics of Infectious Diseases”, SIAM Review, Volume 42, 4, pages 599-653, 2000, &lt;a href=&quot;https://doi.org/10.1137/S0036144500371907&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;https://doi.org/10.1137/S0036144500371907&lt;/a&gt;. &lt;a href=&quot;#ref-1&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&quot;bib-2&quot;&gt;&lt;/a&gt;[2] Johns Hopkins University, “Mortality Analyses”, Johns Hopkins Coronavirus Resource Center, n.d. &lt;a href=&quot;https://coronavirus.jhu.edu/data/mortality&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;https://coronavirus.jhu.edu/data/mortality&lt;/a&gt;. &lt;a href=&quot;#ref-2&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&quot;bib-3&quot;&gt;&lt;/a&gt;[3] Tiberiu Harko, Francisco S.N. Lobo, M.K. Mak, “Exact analytical solutions of the Susceptible-Infected-Recovered (SIR) epidemic model and of the SIR mode”, Applied Mathematics and Computation, Volume 236, Pages 184-194, ISSN 0096-3003, 2014 &lt;a href=&quot;https://doi.org/10.1016/j.amc.2014.03.030&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;https://doi.org/10.1016/j.amc.2014.03.030&lt;/a&gt;. &lt;a href=&quot;#ref-3&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
+        <link>https://Mitchell-Gerrard.github.io/fixing%20old%20code/2025/12/26/fixing-infectionsim.html</link>
+        <guid isPermaLink="true">https://Mitchell-Gerrard.github.io/fixing%20old%20code/2025/12/26/fixing-infectionsim.html</guid>
+        
+        
+        <category>Fixing Old Code</category>
+        
+      </item>
     
       <item>
         <title>Floating-Point Precision in Python for Scientific Simulations</title>
@@ -28,116 +66,6 @@
         
         
         <category>Python Tips</category>
-        
-      </item>
-    
-      <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;Tom&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &apos;Hi, Tom&apos; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Sun, 02 Nov 2025 13:25:27 +0000</pubDate>
-        <link>https://Mitchell-Gerrard.github.io/jekyll/update/2025/11/02/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">https://Mitchell-Gerrard.github.io/jekyll/update/2025/11/02/welcome-to-jekyll.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;Tom&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &apos;Hi, Tom&apos; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 20 Jul 2016 00:00:00 +0000</pubDate>
-        <link>https://Mitchell-Gerrard.github.io/none/2016/07/20/Welcome-to-Jekyll.html</link>
-        <guid isPermaLink="true">https://Mitchell-Gerrard.github.io/none/2016/07/20/Welcome-to-Jekyll.html</guid>
-        
-        
-        <category>none</category>
-        
-      </item>
-    
-      <item>
-        <title>Sed feugiat lorem</title>
-        <description>
-</description>
-        <pubDate>Wed, 20 Jul 2016 00:00:00 +0000</pubDate>
-        <link>https://Mitchell-Gerrard.github.io/blog/2016/07/20/Sed-feugiat-lorem.html</link>
-        <guid isPermaLink="true">https://Mitchell-Gerrard.github.io/blog/2016/07/20/Sed-feugiat-lorem.html</guid>
-        
-        
-        <category>blog</category>
-        
-      </item>
-    
-      <item>
-        <title>Nisl placerat</title>
-        <description>
-</description>
-        <pubDate>Wed, 20 Jul 2016 00:00:00 +0000</pubDate>
-        <link>https://Mitchell-Gerrard.github.io/blog/2016/07/20/Nisl-placerat.html</link>
-        <guid isPermaLink="true">https://Mitchell-Gerrard.github.io/blog/2016/07/20/Nisl-placerat.html</guid>
-        
-        
-        <category>blog</category>
-        
-      </item>
-    
-      <item>
-        <title>Fusce consequat</title>
-        <description>
-</description>
-        <pubDate>Wed, 20 Jul 2016 00:00:00 +0000</pubDate>
-        <link>https://Mitchell-Gerrard.github.io/blog/2016/07/20/Fusce-consequat.html</link>
-        <guid isPermaLink="true">https://Mitchell-Gerrard.github.io/blog/2016/07/20/Fusce-consequat.html</guid>
-        
-        
-        <category>blog</category>
-        
-      </item>
-    
-      <item>
-        <title>Ante fermentum</title>
-        <description>
-</description>
-        <pubDate>Wed, 20 Jul 2016 00:00:00 +0000</pubDate>
-        <link>https://Mitchell-Gerrard.github.io/blog/2016/07/20/Ante-fermentum.html</link>
-        <guid isPermaLink="true">https://Mitchell-Gerrard.github.io/blog/2016/07/20/Ante-fermentum.html</guid>
-        
-        
-        <category>blog</category>
         
       </item>
     
