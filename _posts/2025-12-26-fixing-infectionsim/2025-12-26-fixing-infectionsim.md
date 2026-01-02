@@ -2,7 +2,7 @@
 layout: post
 title: "Fixing infectionsim: Fixing my poor university code! 🔨"
 date: 2025-12-26
-tagline: Fixing the poor layout and lack comments of my SIR modeling using randomly moving particles
+tagline: Fixing the poor quality and adding new features to my old infectionsim
 image: /images/post_images/2025_12_25_fixing_infectionsim/sir_fit_results.png
 category: Fixing Old Code
 ---
