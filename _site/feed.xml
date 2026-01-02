@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 02 Jan 2026 17:24:58 +0000</pubDate>
-    <lastBuildDate>Fri, 02 Jan 2026 17:24:58 +0000</lastBuildDate>
+    <pubDate>Fri, 02 Jan 2026 17:41:07 +0000</pubDate>
+    <lastBuildDate>Fri, 02 Jan 2026 17:41:07 +0000</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
     
       <item>
@@ -131,6 +131,9 @@
 &lt;p&gt;Replacing the brute-force neighbour search with a KD-tree [6] and adding a contact-interval strategy dramatically improves runtime: what used to take many minutes or hours per step can now be run interactively for many more steps and parameter combinations. That performance gain makes systematic exploration practical (parameter sweeps, sensitivity testing and multirun ensembles) rather than a single ad-hoc demo. Fitting a homogeneous SIR model to the simulated infected curve provides useful summary estimates of β and γ, but single-run fits are noisy because events are stochastic and the simulation violates homogeneous-mixing assumptions; aggregating repeated independent runs (reporting medians and spread) yields more robust parameter estimates.&lt;/p&gt;
 
 &lt;p&gt;Important limitations remain. The simulation uses a toroidal 2D domain, a simple distance→probability transmission kernel, and no demographic or behavioural heterogeneity; the SIR fit assumes homogeneous mixing and only summarises I(t). Recording cadence and KD-tree refresh intervals introduce sampling and approximation trade-offs that can bias short-timescale events. Treat the model as a controllable experiment rather than a literal representation of real outbreaks. Practical next steps are already clear: keep the README improvements, run systematic multirun experiments and report medians/intervals, replace large GIFs with compressed video for the web, and consider adding heterogeneity or a richer compartmental structure if you need fitted parameters to reflect specific real‑world mechanisms.&lt;/p&gt;
+
+&lt;p&gt;If you would like to see the state of the project follow this link &lt;a href=&quot;https://github.com/Mitchell-Gerrard/infectionsim&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;
+https://github.com/Mitchell-Gerrard/infectionsim&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 class=&quot;major&quot;&gt; Bibliography&lt;/h3&gt;
 &lt;p&gt;&lt;a id=&quot;bib-1&quot;&gt;&lt;/a&gt;[1] Hethcote, Herbert W, “The Mathematics of Infectious Diseases”, SIAM Review, Volume 42, 4, pages 599-653, 2000, &lt;a href=&quot;https://doi.org/10.1137/S0036144500371907&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;https://doi.org/10.1137/S0036144500371907&lt;/a&gt;. &lt;a href=&quot;#ref-1&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;

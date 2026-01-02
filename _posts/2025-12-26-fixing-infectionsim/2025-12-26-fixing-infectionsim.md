@@ -128,6 +128,8 @@ Replacing the brute-force neighbour search with a KD-tree [6] and adding a conta
 
 Important limitations remain. The simulation uses a toroidal 2D domain, a simple distance→probability transmission kernel, and no demographic or behavioural heterogeneity; the SIR fit assumes homogeneous mixing and only summarises I(t). Recording cadence and KD-tree refresh intervals introduce sampling and approximation trade-offs that can bias short-timescale events. Treat the model as a controllable experiment rather than a literal representation of real outbreaks. Practical next steps are already clear: keep the README improvements, run systematic multirun experiments and report medians/intervals, replace large GIFs with compressed video for the web, and consider adding heterogeneity or a richer compartmental structure if you need fitted parameters to reflect specific real‑world mechanisms.
 
+If you would like to see the state of the project follow this link <a href="https://github.com/Mitchell-Gerrard/infectionsim" target="_blank" rel="noopener noreferrer">
+https://github.com/Mitchell-Gerrard/infectionsim</a>
 
 
 <h3 class="major"> Bibliography</h3>
