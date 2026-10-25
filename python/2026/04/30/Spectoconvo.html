@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<!--
+  Solid State by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Spectoconvo</title>
+  <meta name="description" content="Why Put A Message In Music?">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://Mitchell-Gerrard.github.io/python/2026/04/30/Spectoconvo.html">
+  <link rel="alternate" type="application/rss+xml" title="Mitchell Gerrard" href="https://Mitchell-Gerrard.github.io/feed.xml">
+
+  <!--[if lte IE 8]><script src="/js/ie/html5shiv.js"></script><![endif]-->
+  <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
+  <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie8.css" /><![endif]-->
+</head>
+  <body>
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header" class="alt">
+  <h1><a href="/">Mitchell Gerrard</a></h1>
+  <nav>
+    <a href="#menu">Menu</a>
+  </nav>
+</header>
+
+<!-- Menu -->
+<nav id="menu">
+  <div class="inner">
+    <h2>Menu</h2>
+    <ul class="links">
+      <li><a href="/index.html">Home</a></li>
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        <li><a href="/posts/">All Posts</a></li>
+        
+      
+        
+        <li><a href="/previous_work/previous_work.html">My previous work and papers</a></li>
+        
+      
+        
+      
+    </ul>
+    <a href="#" class="close">Close</a>
+  </div>
+</nav>
+
+<!-- Banner -->
+      <!-- Wrapper -->
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<!-- Wrapper -->
+	<section id="wrapper">
+		<header>
+			<div class="inner">
+				<h2>Spectoconvo</h2>
+				<p class="post-meta"><time datetime="2026-04-30T00:00:00+00:00" itemprop="datePublished">Apr 30, 2026</time></p>
+				<p>Hiding a conversation in sound</p>
+			</div>
+		</header>
+
+		<!-- Content -->
+			<div class="wrapper">
+				<div class="inner">
+
+					<h3 class="major">Why Put A Message In Music?</h3>
+
+<p>Spectrograms turn sound into pictures. Time runs from left to right, frequency runs from bottom to top, and the brightness of each point represents the energy in the audio. Once I learned that an ordinary piece of music could contain a second visual layer, I wanted to try putting a conversation there.</p>
+
+<p>The idea started with <em>Doom (2016)</em>. Its soundtrack is famous for imagery that appears when audio is viewed as a spectrogram. That strange collision of music, code, and hidden pictures made me wonder whether a spectrogram could carry something more practical than an easter egg: a message for a friend.</p>
+
+<h3 class="major">What Is Spectoconvo?</h3>
+
+<p><a href="https://github.com/Mitchell-Gerrard/spectoconvo">Spectoconvo</a> is a Python package for embedding text into audio and recovering it later. It uses a Fourier transform to inspect the sound, renders the message as an image, and writes that image into the higher-frequency part of the spectrum. The result still behaves like an audio file, but its spectrogram contains a readable message.</p>
+
+<figure>
+	<img src="https://raw.githubusercontent.com/Mitchell-Gerrard/spectoconvo/main/output_spectrogram.png" alt="Spectrogram of the original audio" />
+	<figcaption>The original audio, represented as a spectrogram.</figcaption>
+</figure>
+
+<p>The package exposes two main steps:</p>
+
+<ol>
+	<li><code>add_message_to_spectrogram</code> embeds a message and writes a new audio file.</li>
+	<li><code>decode</code> reads the processed audio and reconstructs the message image.</li>
+</ol>
+
+<p>The encoder can work with WAV and MP3 examples, and the text renderer was designed with multiple languages in mind. That made the project more interesting than drawing an English sentence into a fixed image: the message has to become a visual signal that can survive the trip through an audio format.</p>
+
+<h3 class="major">The Encoding Experiment</h3>
+
+<p>For a first test, I used a short audio sample and a message such as “Hello, Spectrogram!”. Spectoconvo creates an image from the text, transforms the source audio into the frequency domain, and combines the two. The <code class="language-plaintext highlighter-rouge">start_freq</code> and <code class="language-plaintext highlighter-rouge">intensity</code> settings control where the message appears and how strongly it is drawn.</p>
+
+<figure>
+	<img src="https://raw.githubusercontent.com/Mitchell-Gerrard/spectoconvo/main/message_image.png" alt="The text message rendered as an image" />
+	<figcaption>The message before it is placed into the audio spectrum.</figcaption>
+</figure>
+
+<figure>
+	<img src="https://raw.githubusercontent.com/Mitchell-Gerrard/spectoconvo/main/output_with_message_spectrogram.png" alt="Spectrogram containing an encoded message" />
+	<figcaption>The same audio after the message has been embedded.</figcaption>
+</figure>
+
+<p>The high-frequency placement is a useful compromise. It gives the message room to exist without competing too much with the main musical content, although it is not invisible and it is not guaranteed to survive every conversion. Re-encoding, compression, aggressive filtering, or a low sample rate can all damage the hidden layer.</p>
+
+<h3 class="major">Decoding The Conversation</h3>
+
+<p>Decoding is deliberately simple from the user’s perspective: point the package at the modified audio file and provide a destination for the reconstructed image. The output is a visual record of the message rather than a decoded text string, which keeps the project closely tied to the spectrogram idea.</p>
+
+<figure>
+	<img src="https://raw.githubusercontent.com/Mitchell-Gerrard/spectoconvo/main/output_image_decode.png" alt="Recovered message image from the audio file" />
+	<figcaption>The message recovered from the processed audio.</figcaption>
+</figure>
+
+<h3 class="major">What I Learned</h3>
+
+<p>This project taught me that audio is not just something to listen to. It is also data that can be measured, transformed, drawn on, and inspected from another angle. The Fourier transform provided the bridge between those views: it changed the problem from “how do I edit a sound wave?” into “where can a visual signal live inside this sound?”</p>
+
+<p>I also learned that the boundary between a demo and a reusable package is made of small details. Handling different audio formats, choosing sensible frequency and intensity defaults, rendering non-English text, and making the encode/decode workflow understandable all mattered as much as the central experiment.</p>
+
+<p>Most importantly, Spectoconvo clarified the limits of the idea. This is a playful form of audio steganography, not encryption. Anyone who inspects the spectrum can discover that something is there, and the message can be degraded by ordinary audio processing. Its value is in the experiment: making a conversation visible inside a piece of sound.</p>
+
+<h3 class="major">Try It Yourself</h3>
+
+<p>The package is available on <a href="https://pypi.org/project/spectoconvo/">PyPI</a>, and the source, examples, and audio assets are on <a href="https://github.com/Mitchell-Gerrard/spectoconvo">GitHub</a>. Start with a short WAV file, encode a sentence, open the resulting spectrogram, and then decode it again. The best part is seeing the message appear in a place where you normally only expect music.</p>
+
+
+					<section class="features">
+	
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+</section>
+					
+				</div>
+			</div>
+	</section>
+	<script>
+  MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</article>
+
+      <!-- Footer -->
+      <section id="footer">
+    <div class="inner">
+        <h2 class="major">Get in touch</h2>
+        <p>With intrest in my work past or current, job opotunities and intrest in my blog, send a message.</p>
+        <form method="post" action="https://formspree.io/f/xkgblopy">
+            <div class="fields">
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" />
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" />
+                </div>
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="4"></textarea>
+                </div>
+            </div>
+            <ul class="actions">
+                <li><input type="submit" value="Send Message" /></li>
+            </ul>
+        </form>
+        <ul class="contact">
+            <li ><span class="icon solid fa-solid fa-envelope"></span><a href="#">mg6u19@soton.ac.uk</a></li>
+			<li ><span class="icon brands fa-brands fa-bluesky"></span><a href="https://bsky.app/profile/mitchell-gerrard.bsky.social">@mitchell-gerrard.bsky.social </a></li>
+            <li ><span class="icon brands fa-brands fa-github"></span><a href="https://github.com/Mitchell-Gerrard">Mitchell-Gerrard </a></li>
+        </ul>
+        <ul class="copyright">
+            <li>&copy; Untitled Inc. All rights reserved.</li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+    </div>
+</section>
+    </div>
+  <!-- Scripts -->
+  <script src="/js/skel.min.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/jquery.scrollex.min.js"></script>
+<script src="/js/util.js"></script>
+<!--[if lte IE 8]><script src="/js/ie/respond.min.js"></script><![endif]-->
+<script src="/js/main.js"></script>
+  </body>
+</html>
