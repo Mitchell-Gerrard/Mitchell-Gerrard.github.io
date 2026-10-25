@@ -9,4 +9,4 @@ menu: show
 
 <h3 class="major">Photon 24</h3>
 <p>Photon 2024 took place during September of 2024 in Swansea, United Kingdom. With many highlights including wining a poster prize during my first conference. </p>
-<a href="{{ '/confrences/Photon24/Photon24.md' | relative_url }}"  class="special">Learn more</a>
+<a href="{{ '/confrences/Photon24/Photon24' | relative_url }}"  class="special">Learn more</a>
