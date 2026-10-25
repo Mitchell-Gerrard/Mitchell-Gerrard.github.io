@@ -1,8 +1,8 @@
 ---
 layout: page
-title: My previous work and papers
+title: My Conferences
 image:
-tagline: This is where you can see my previous work all in one place
+tagline: This is where you can see the conferences I have been to
 category: none
 menu: show
 ---
