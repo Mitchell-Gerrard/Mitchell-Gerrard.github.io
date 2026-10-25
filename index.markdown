@@ -30,7 +30,7 @@ layout: default
         <a href="#" class="image"><img src="images/Photon_poster.jpg" alt="" /></a>
         <div class="content">
             <h2 class="major">Conferences</h2>
-            <p>The confrences i have been to like Photon24, and futre confrences lke CLEO</p>
+            <p>The confrences I have been to including Photon24, CLEO Europe and Photonic Europe</p>
             <a href="confrences.html" class="special">Learn more</a>
         </div>
     </div>

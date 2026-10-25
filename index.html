@@ -6,6 +6,23 @@ layout: default
 
 	{% include spotlight.html %}
 
+	{% assign spectoconvo_post = site.posts | where: "title", "Spectoconvo" | first %}
+	{% if spectoconvo_post %}
+	<section id="spectoconvo" class="wrapper spotlight style3">
+		<div class="inner">
+			<a href="{{ spectoconvo_post.url | prepend: site.baseurl }}" class="image">
+				<img src="{{ spectoconvo_post.image }}" alt="Spectoconvo spectrogram" />
+			</a>
+			<div class="content">
+				<h2 class="major">Featured project: Spectoconvo</h2>
+				<p>Embedding conversations in audio spectrograms with Python, Fourier transforms, and image-based message encoding.</p>
+				<a href="{{ spectoconvo_post.url | prepend: site.baseurl }}"
+					class="special">Read the project post</a>
+			</div>
+		</div>
+	</section>
+	{% endif %}
+
 	<section id="four" class="wrapper alt style1">
 		<div class="inner">
 			<h2 class="major">{{ site.postsTitle }}</h2>
