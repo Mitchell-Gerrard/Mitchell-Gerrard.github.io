@@ -18,7 +18,7 @@ So remembering the days I spent there I went to the beach to breath in the sea a
 
 The next morning learning how much fun having a paid breakfast at a hotel is. Yummy! Having eggs Benedict, what a fantastic breakfast.
 <p style="text-align:center">
-<img  src="{{ '/Current_work/20240904_071900.jpg' | relative_url }}" alt="Image of Eggs Benedict" style="max-width:100%;height:auto;">
+<img  src="{{ '/confrences/20240904_071900.jpg' | relative_url }}" alt="Image of Eggs Benedict" style="max-width:100%;height:auto;">
 </p>
 Then making my way to the conference center which dint exist during my time as an undergraduate in the town, bringing my poster with me to put up ready for the presentations later in the week. Walking in there is the massive hall where the poster presentation would take place this is incredible i have never seen a room so big so empty just to show off lots of work by dedicated researchers. After pining up my poster, I went to my first talks, all of which were interesting learning about timing using lasers, how they reduce error at npl and the 50 year celebration my supervisors talk was part of.
 <p style="text-align:center">
@@ -32,7 +32,7 @@ The poster presentation felt like chaos in my head everyone walking around judgi
 <h3 class="major"> Prize Giving</h3>
 During the prize giving I was not expecting to win the prize so I was joking around with many people from the University of Bristol. So after a few wines it came as a large surprise to learn that my poster won the ISAT prize at Photon 24. This made me proud of the work I have performed and that my research efforts are appreciated in the wider world, and my communication skills being strong, giving me confidence to continue to perform interesting research.
 <p style="text-align:center">
-<img src="{{ '/confrences/Photon24/20240904_200232.jpg' | relative_url }}" alt="Photo of wine at the prize ceremony" style="max-width:100%;height:auto;">
+<img src="{{ '/confrences/Photon24/20240904_173335.jpg' | relative_url }}" alt="Photo of wine at the prize ceremony" style="max-width:100%;height:auto;">
 </p>
 <h3 class='major'> What I learned</h3>
 Going to my first conference taught me a lot, from how to communicate with other researchers, how small and large the research network truly is and the breath of knowledge humanity has been able to obtain. It is incredible and I believe the next conference will be just as much fun as the first.
